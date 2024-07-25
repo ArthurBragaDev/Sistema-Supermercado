@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace Sistema_Supermercado
 {
     public partial class Form1 : Form
@@ -5,11 +8,14 @@ namespace Sistema_Supermercado
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
+
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)

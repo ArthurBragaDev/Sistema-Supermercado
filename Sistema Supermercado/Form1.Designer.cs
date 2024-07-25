@@ -48,6 +48,7 @@
             bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             label1 = new Label();
             label4 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // guna2CircleButton1
@@ -60,6 +61,8 @@
             guna2CircleButton1.ForeColor = Color.White;
             guna2CircleButton1.Location = new Point(-183, -27);
             guna2CircleButton1.Name = "guna2CircleButton1";
+            guna2CircleButton1.PressedColor = Color.Empty;
+            guna2CircleButton1.PressedDepth = 0;
             guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton1.Size = new Size(390, 402);
@@ -81,6 +84,7 @@
             bunifuTextBox1.BorderColorIdle = Color.Silver;
             bunifuTextBox1.BorderRadius = 1;
             bunifuTextBox1.BorderThickness = 1;
+            bunifuTextBox1.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             bunifuTextBox1.CharacterCasing = CharacterCasing.Normal;
             bunifuTextBox1.DefaultFont = new Font("Segoe UI", 9.25F);
             bunifuTextBox1.DefaultText = "";
@@ -91,7 +95,7 @@
             bunifuTextBox1.IconPadding = 10;
             bunifuTextBox1.IconRight = null;
             bunifuTextBox1.IconRightCursor = Cursors.IBeam;
-            bunifuTextBox1.Location = new Point(345, 127);
+            bunifuTextBox1.Location = new Point(341, 127);
             bunifuTextBox1.MaxLength = 32767;
             bunifuTextBox1.MinimumSize = new Size(1, 1);
             bunifuTextBox1.Modified = false;
@@ -155,6 +159,7 @@
             bunifuTextBox2.BorderColorIdle = Color.Silver;
             bunifuTextBox2.BorderRadius = 1;
             bunifuTextBox2.BorderThickness = 1;
+            bunifuTextBox2.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             bunifuTextBox2.CharacterCasing = CharacterCasing.Normal;
             bunifuTextBox2.DefaultFont = new Font("Segoe UI", 9.25F);
             bunifuTextBox2.DefaultText = "";
@@ -165,7 +170,7 @@
             bunifuTextBox2.IconPadding = 10;
             bunifuTextBox2.IconRight = null;
             bunifuTextBox2.IconRightCursor = Cursors.IBeam;
-            bunifuTextBox2.Location = new Point(345, 192);
+            bunifuTextBox2.Location = new Point(341, 192);
             bunifuTextBox2.MaxLength = 32767;
             bunifuTextBox2.MinimumSize = new Size(1, 1);
             bunifuTextBox2.Modified = false;
@@ -217,7 +222,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label2.Location = new Point(224, 130);
+            label2.Location = new Point(220, 130);
             label2.Name = "label2";
             label2.Size = new Size(115, 28);
             label2.TabIndex = 4;
@@ -228,7 +233,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label3.Location = new Point(263, 195);
+            label3.Location = new Point(259, 195);
             label3.Name = "label3";
             label3.Size = new Size(76, 28);
             label3.TabIndex = 4;
@@ -240,7 +245,7 @@
             comboBox1.Font = new Font("Segoe UI", 12F);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "ADMIN", "VENDEDOR" });
-            comboBox1.Location = new Point(345, 63);
+            comboBox1.Location = new Point(341, 63);
             comboBox1.Margin = new Padding(20, 3, 3, 3);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(219, 36);
@@ -294,7 +299,7 @@
             bunifuButton21.IdleIconLeftImage = null;
             bunifuButton21.IdleIconRightImage = null;
             bunifuButton21.IndicateFocus = false;
-            bunifuButton21.Location = new Point(345, 248);
+            bunifuButton21.Location = new Point(341, 248);
             bunifuButton21.Name = "bunifuButton21";
             bunifuButton21.OnDisabledState.BorderColor = Color.FromArgb(191, 191, 191);
             bunifuButton21.OnDisabledState.BorderRadius = 1;
@@ -340,7 +345,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(404, 12);
+            label1.Location = new Point(400, 12);
             label1.Name = "label1";
             label1.Size = new Size(100, 38);
             label1.TabIndex = 4;
@@ -351,12 +356,23 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(419, 295);
+            label4.Location = new Point(415, 295);
             label4.Name = "label4";
             label4.Size = new Size(72, 28);
             label4.TabIndex = 7;
             label4.Text = "Limpar";
             label4.Click += label4_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(562, -10);
+            label6.Name = "label6";
+            label6.Size = new Size(31, 38);
+            label6.TabIndex = 4;
+            label6.Text = "x";
+            label6.Click += label1_Click_1;
             // 
             // Form1
             // 
@@ -368,12 +384,14 @@
             Controls.Add(comboBox1);
             Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(label6);
             Controls.Add(label1);
             Controls.Add(bunifuTextBox2);
             Controls.Add(bunifuTextBox1);
             Controls.Add(guna2CircleButton1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
+            RightToLeft = RightToLeft.No;
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
@@ -391,5 +409,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         private Label label1;
         private Label label4;
+        private Label label6;
     }
 }
